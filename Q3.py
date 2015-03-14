@@ -1,5 +1,12 @@
 # -*- coding: utf-8 -*-
 """
+Created on Fri Mar 13 17:05:33 2015
+
+@author: Mak
+"""
+
+# -*- coding: utf-8 -*-
+"""
 Created on Fri Mar 13 02:48:36 2015
 
 @author: Mak
@@ -12,7 +19,7 @@ import numpy as np
 from statsmodels.formula.api import ols
 import statsmodels.api as sm
 from datetime import datetime , timedelta
-
+import matplotlib.pyplot as mpl
 import pylab as plt
 import numpy as np
 import json
@@ -71,7 +78,7 @@ for files in hashs:
         j=0
         while j < thours:
             time[j]=j%24
-            results[j]=counts[j+1]
+            results[j]=counts[j+1]      
             j=j+1
         results[thours]=counts[0]
         print counts
@@ -87,6 +94,24 @@ for files in hashs:
         formula = 'results ~ counts + retweets + tmax + time + followers'
         out = sm.formula.ols(formula, dta).fit()
         print(out.summary())
+        mostpopular=[0]*3
+        mostpopular[0] = counts
+        mostpopular[1] = retweets
+        mostpopular[2] = followers
+        
+        
+        plt.scatter( results,mostpopular[0])
+        plt.show()    
+       
+        #print "done 1"
+        plt.scatter( results,mostpopular[1])
+        plt.show()             
+        print "done 1"
+
+        plt.scatter( results,mostpopular[2])
+        plt.show()             
+         
+        
         ifile.close()
 
 
