@@ -10,8 +10,8 @@ from datetime import datetime , timedelta
 import pylab as plt
 
 
-#hashs=['tweets_#gopatriots.txt','tweets_#gohawks.txt','tweets_#patriots.txt','tweets_#nfl.txt','tweets_#superbowl.txt','tweets_#sb49.txt']
-hashs=['tweets_#gopatriots.txt']
+hashs=['tweets_#gopatriots.txt','tweets_#gohawks.txt','tweets_#patriots.txt','tweets_#nfl.txt','tweets_#superbowl.txt','tweets_#sb49.txt']
+#hashs=['tweets_#gopatriots.txt']
 
 for files in hashs:  
     fseconds=0

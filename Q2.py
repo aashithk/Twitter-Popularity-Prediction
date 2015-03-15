@@ -23,8 +23,8 @@ from pandas import *
 
 
 
-#hashs=['tweets_#superbowl.txt','tweets_#sb49.txt','tweets_#patriots.txt','tweets_#nfl.txt','tweets_#gopatriots.txt','tweets_#gohawks.txt']
-hashs=['tweets_#gopatriots.txt']
+hashs=['tweets_#superbowl.txt','tweets_#sb49.txt','tweets_#patriots.txt','tweets_#nfl.txt','tweets_#gopatriots.txt','tweets_#gohawks.txt']
+#hashs=['tweets_#gopatriots.txt']
 
 for files in hashs: 
     fseconds=0
