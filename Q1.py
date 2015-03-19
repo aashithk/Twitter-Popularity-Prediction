@@ -10,8 +10,10 @@ from datetime import datetime , timedelta
 import pylab as plt
 
 
-hashs=['tweets_#gopatriots.txt','tweets_#gohawks.txt','tweets_#patriots.txt','tweets_#nfl.txt','tweets_#superbowl.txt','tweets_#sb49.txt']
+#hashs=['tweets_#gopatriots.txt','tweets_#gohawks.txt','tweets_#patriots.txt','tweets_#nfl.txt','tweets_#superbowl.txt','tweets_#sb49.txt']
 #hashs=['tweets_#gopatriots.txt']
+#hashs=['tweets_#nfl.txt']
+hashs=['tweets_#superbowl.txt']
 
 for files in hashs:  
     fseconds=0
@@ -55,9 +57,9 @@ for files in hashs:
                 k=k+1
                 tsum=tsum+counts[j]
             j=j+1
-        if (files == 'tweets_#superbowl.txt' or files == 'tweets_#nfl.txt'):
-            bar1 = plt.bar( xaxis,counts)
-            plt.show()
+        #if (files == 'tweets_#superbowl.txt' or files == 'tweets_#nfl.txt'):
+        bar1 = plt.bar( xaxis,counts)
+        plt.show()
             
         print str(tsum)+" : "+ str(totalusers)
         print files+":Average number of tweets per hour:"+str((tsum+0.0)/(thours+0.0))
